@@ -24,7 +24,7 @@ jobs:
           git remote add origin https://japan7:${{ secrets.GITLAB_PAT }}@git.inpt.fr/japan7/emails.git
           git fetch origin ${{ github.event.head_commit.message }}
           git checkout FETCH_HEAD
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v6
         with:
           node-version-file: .nvmrc
       - run: npm ci
